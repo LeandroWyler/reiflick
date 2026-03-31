@@ -3817,59 +3817,6 @@
                     data-cfasync="false"
                     src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
                   ></script>
-                  <---!script type="rocketlazyloadscript">
-                    document.addEventListener('DOMContentLoaded', function () {
-                        const nomes = [
-                            "Marcio", "João", "Ana", "Maria", "Lucas", "Fernanda", "Carlos",
-                            "Patrícia", "Bruno", "Mariana", "Gustavo", "Julia", "Ricardo",
-                            "Luciana", "Eduardo", "Sofia", "Thiago", "Beatriz", "Felipe",
-                            "Larissa", "Rafael", "Vera", "Roberta", "Paulo", "Tânia",
-                            "Tiago", "Simone", "Ricardo", "Claudia", "Renato", "Isabela"
-                        ];
-                        const planos = ["Mensal", "Anual", "Trimestral"];
-                        const popups = [];
-
-                        // Criação dos pop-ups com nomes e planos aleatórios
-                        for (let i = 0; i < 10; i++) {
-                            const nomeAleatorio = nomes[Math.floor(Math.random() * nomes.length)];
-                            const planoAleatorio = planos[Math.floor(Math.random() * planos.length)];
-
-                            const popup = document.createElement('div');
-                            popup.classList.add('popup-container');
-                            popup.innerHTML = `<i class="fas fa-check-circle fa-2x icon"></i>&nbsp;<span class="destaque-nome"><b>${nomeAleatorio}</b></span>&nbsp;assinou o plano&nbsp;<span class="destaque"><b>${planoAleatorio}</b></span>&nbsp;do <b class="bonus-brand">REIFLICK</b>`;
-                            document.body.appendChild(popup);
-                            popups.push(popup);
-                        }
-
-                        // Função para remover o popup com animação
-                        function removePopup(popup) {
-                            popup.style.animation = "fadeOutUp 3s forwards"; // Ajustado para 3 segundos
-                            setTimeout(function() {
-                                popup.remove();
-                            }, 3000); // Tempo de animação de 3 segundos
-                        }
-
-                        // Função para exibir os pop-ups com tempos aleatórios
-                        function displayPopups() {
-                            let delay = 0;
-                            popups.forEach(function(popup) {
-                                const tempoAleatorio = Math.floor(Math.random() * (15 - 8 + 1)) + 8; // Tempo aleatório entre 8 e 15 segundos
-                                setTimeout(function() {
-                                    popup.style.animationDelay = delay + "s";
-                                    popup.style.opacity = 1;
-                                    popup.style.transform = "translateX(0)";
-                                    setTimeout(function() {
-                                        removePopup(popup);
-                                    }, 3000); // Tempo de exibição do pop-up
-                                }, delay * 1000);
-                                delay += tempoAleatorio; // Incrementando o delay de exibição
-                            });
-                        }
-
-                        // r a exibição dos pop-ups
-                        displayPopups();
-                    });
-                  <----!/script!>
 
                   <!-- Incluindo o Font Awesome -->
                   <script
